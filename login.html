@@ -6,14 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="login.css">
 </head>
-<body>
+<body onload="loadlogin()">
     <section>
         <div class="form-container">
             <h1>Login Form</h1>
         <form action="index.html">
             <div class="control">
-            <label for="name">Name</label>
-            <input type="text" id="name" >
+            <label for="name">Name </label>
+            <input type="text" id="name myinput"  onkeydown="myFunction2(event)" >
+            <p id="demo"></p>
             </div>
             <div class="control">
             <label for="psw">Password</label>
@@ -27,5 +28,8 @@
         <p><a href="#">Forget password ?</a></p>
         </div>
     </section>
+    <script src="event.js">
+    
+    </script>
 </body>
 </html>

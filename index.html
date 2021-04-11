@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="responsive.css">
     
 </head>
-<body>
+<body onclick="myFunction(event)">
+
     
 <div class="headerContainer">
 
@@ -26,7 +27,7 @@
 
 <li><a href="#">Home</a></li>
 <li><a href="service.html">Service</a></li>
-<li><a href="#">Category</a></li>
+<li><a href="#" onclick="category()">Category</a></li>
 <li><a href="login.html">Login</a></li>
 <li><a href="contact.html">Contact</a></li>
 
@@ -39,24 +40,29 @@
 
 <div class="main">
 
-<h2 class="all_products">All Cars</h2>
+
+<h2 class="all_products">All Cars <span id="discount_price"></span></h2>
+
 
 <div class="product">
 
 <h2 class="p-head">Model S</h2>
 
 <img src="img/tcar1.jpg" class="product_img" alt="not found">
-<h4 class="Price">Price:$250000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$250000</h4>
+
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 
 </div>
+
 <div class="product">
 
 <h2 class="p-head">Model 3</h2>
 
 <img src="img/tcar3.png" class="product_img" alt="not found">
-<h4 class="Price">Price:$27000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$27000</h4>
+
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 
 
 
@@ -69,45 +75,46 @@
 <h2 class="p-head">Model X</h2>
 
 <img src="img/tcar4.jpg" class="product_img" alt="not found">
-<h4 class="Price">Price:$80000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$80000</h4>
+<span id="discount_price"></span>
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 </div>
 <div class="product">
 <h2 class="p-head">Model Y</h2>
 <img src="img/tcar5.jpg" class="product_img" alt="not found">
-<h4 class="Price">Price:$19000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$19000</h4>
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 </div>
 <div class="product">
 <h2 class="p-head">Cybertruck</h2>
 <img src="img/tcar6.png" class="product_img" alt="not found">
-<h4 class="Price">Price:$25000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$25000</h4>
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 </div>
 <div class="product">
 <h2 class="p-head">Roadster</h2>
 <img src="img/tcar7.jpg" class="product_img" alt="not found">
-<h4 class="Price">Price:$250000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$250000</h4>
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 </div>
 <div class="product">
 <h2 class="p-head">3d X </h2>
 <img src="img/tcar8.jpg" class="product_img" alt="not found">
-<h4 class="Price">Price:$29000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$29000</h4>
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 </div>
 <div class="product">
 <h2 class="p-head">3D Y</h2>
 <img src="img/tcar1.jpg" class="product_img" alt="not found">
-<h4 class="Price">Price:$28000</h4>
-<button class="add_cart"><a href="#">Add to Cart</a></button>
+<h4 class="Price" onmouseover="price()">Price:$28000</h4>
+<button class="add_cart" onclick="Cart()"><a href="#">Add to Cart</a></button>
 </div>
 </div>
 <div class="content">
-<h1 class="details">Cars Details Section</h1>
-<div class="content1">
+<h1 class="details" onclick="car_details()">Car Details Section </h1><span id="demo"></span>
+<div class="content1" >
 <h3 class="content-header"><marquee behavior="" direction="">Model X</marquee></h3>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+<p id="details1" onmousedown="mouseDown()" onmouseup= "onmouseUp()" > Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
 Illo facere eveniet omnis sequi minus accusantium autem, culpa fugit pariatur 
 consectetur nemo delectus ut, voluptatum porro. Quasi nisi cumque facere distinctio 
 architecto consectetur unde, natus repudiandae iure impedit, ipsa recusandae, aut 
@@ -118,7 +125,7 @@ tenetur repellat dignissimos molestias quia iure, voluptas facilis ipsam.</p>
 </div>
 <div class="content1">
 <h3 class="content-header"><marquee behavior="" direction="">Model Y</marquee></h3>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+<p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
 Illo facere eveniet omnis sequi minus accusantium autem, culpa fugit pariatur 
 consectetur nemo delectus ut, voluptatum porro. Quasi nisi cumque facere distinctio 
 architecto consectetur unde, natus repudiandae iure impedit, ipsa recusandae, aut 
@@ -129,7 +136,7 @@ tenetur repellat dignissimos molestias quia iure, voluptas facilis ipsam.</p>
 </div>
 <div class="content1">
 <h3 class="content-header"><marquee behavior="" direction="">Model Z</marquee></h3>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+<p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
 Illo facere eveniet omnis sequi minus accusantium autem, culpa fugit pariatur 
 consectetur nemo delectus ut, voluptatum porro. Quasi nisi cumque facere distinctio 
 architecto consectetur unde, natus repudiandae iure impedit, ipsa recusandae, aut 
@@ -211,6 +218,13 @@ End Footer
 
 </div>
 
+
+
+
+
+<script src="event.js">
+
+</script>
 
 </body>
 </html>

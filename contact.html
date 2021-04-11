@@ -43,14 +43,15 @@
  <!--
      start Main
  -->
+ <form  onsubmit="myFunction1()">
 <div id="all">
     <h1>Signup Box</h1>
     <div id="inputfield">
-        <input type="text" placeholder="Enter your name">
+        <input type="text" placeholder="Enter your name" id="fname" onkeyup="inputname()">
     </div>
 
     <div id="inputfield">
-        <input type="text" placeholder="Enter your lastname">
+        <input type="text" placeholder="Enter your lastname" onkeydown="inputfunction()">
 
     </div>
 
@@ -77,19 +78,19 @@
                 select country
             </option>
 
-            <option>
+            <option value="#00593F">
                 Bangladesh
             </option>
 
-            <option>
+            <option value="#E71010">
                 Afgan
             </option>
 
-            <option>
+            <option value="#658DD1">
                 Nepal
             </option>
 
-            <option>
+            <option value="#CB2027">
                 Aushi
             </option>
 
@@ -116,7 +117,7 @@
 
    </div> 
 
-
+</form>
 
 
 
@@ -181,6 +182,10 @@ Footer part
 
      End Footer
  -->
+
+ <script src="event.js">
+
+</script>
     
 </body>
 </html>
